@@ -14,11 +14,9 @@ module.exports = function (pictures) {
                     ${pictures.map(function (pic) {
                       return picture(pic);
                     })}</div>
-                </div>
-                <div id="map" class="col m8 l9">
-                  
+                  <div id="map" class="col m8 l9"></div>
                 </div>
               </div>
             </div>`;
-return layout(el);
+  return layout(el);
 }

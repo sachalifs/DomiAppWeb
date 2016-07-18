@@ -4,12 +4,13 @@ var template = require('./template');
 var title = require('title');
 var request = require('superagent');
 var header = require('../header');
-//var mapas = require('./mapas');
+var mapas = require('./mapas');
 
 page('/', header, asyncLoad, function (ctx, next) { 
   title('Domilogistica');
   var main = document.getElementById('main-container');
   empty(main).appendChild(template(ctx.pictures));
+  mapas();
 })
 
 async function asyncLoad(ctx, next) {
